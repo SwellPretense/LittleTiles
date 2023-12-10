@@ -1,5 +1,5 @@
-#ifndef COLORS_H
-#define COLORS_H
+#ifndef COLORS_HPP
+#define COLORS_HPP
 
 #include "Source.hpp"
 
@@ -14,4 +14,4 @@ public:
     static constexpr const char* RESET = "\033[0m";
 };
 
-#endif // COLORS_H
+#endif // COLORS_HPP

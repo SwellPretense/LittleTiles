@@ -1,10 +1,14 @@
 #include "Source.hpp"
 
+Application* app = nullptr;
+
 int main()
 {
-    Debug::Log::Notify("Things Starting");
-    Debug::Log::Warn("Missing Everything?");
-    Debug::Log::Alert("Yes We Are");
+    app = new Application();
+    while (app->engaged)
+    {
+        app->HandleEvents();
+    }
 
     return 1;
 }

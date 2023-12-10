@@ -15,6 +15,12 @@
     <Filter Include="Source\Console">
       <UniqueIdentifier>{fc4caccb-cf7b-4d20-b2c6-a68308d134a6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Rhyme">
+      <UniqueIdentifier>{41ef14c4-94dd-4012-ab4e-0a7cd16c4faf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header\Rhyme">
+      <UniqueIdentifier>{693df637-70ab-4249-9735-5d34ba187e1b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp">
@@ -22,6 +28,9 @@
     </ClCompile>
     <ClCompile Include="Application.cpp">
       <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Ent.cpp">
+      <Filter>Source\Rhyme</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -36,6 +45,9 @@
     </ClInclude>
     <ClInclude Include="Application.hpp">
       <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Ent.hpp">
+      <Filter>Header\Rhyme</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

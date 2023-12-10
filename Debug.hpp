@@ -1,5 +1,5 @@
-#ifndef DEBUG_H
-#define DEBUG_H
+#ifndef DEBUG_HPP
+#define DEBUG_HPP
 
 #include "Source.hpp"
 
@@ -9,7 +9,7 @@ public:
 	public:
 		static void Notify(const char* msg) // 0
 		{
-			std::cout << Colors::BLUE << "    -[LOG]- " << Colors::RESET << msg << "\n";
+			std::cout << Colors::BLUE << "-[LOG]- " << Colors::RESET << msg << "\n";
 		}
 		static void Warn(const char* msg)   // 1
 		{
@@ -17,9 +17,9 @@ public:
 		} 
 		static void Alert(const char* msg) // 2
 		{
-			std::cout << Colors::RED << "  -[ERROR]- " << Colors::RESET << msg << "\n";
+			std::cout << Colors::RED << "-[ERROR]- " << Colors::RESET << msg << "\n";
 		}
 	};
 };
 
-#endif // DEBUG_H
+#endif // DEBUG_HPP

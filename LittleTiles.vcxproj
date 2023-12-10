@@ -128,12 +128,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Application.cpp" />
+    <ClCompile Include="Ent.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application.hpp" />
     <ClInclude Include="Colors.hpp" />
     <ClInclude Include="Debug.hpp" />
+    <ClInclude Include="Ent.hpp" />
     <ClInclude Include="Source.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
