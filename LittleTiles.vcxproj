@@ -136,7 +136,11 @@
     <ClInclude Include="Colors.hpp" />
     <ClInclude Include="Debug.hpp" />
     <ClInclude Include="Ent.hpp" />
+    <ClInclude Include="Keys.hpp" />
     <ClInclude Include="Source.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

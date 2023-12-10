@@ -8,7 +8,7 @@ Application::Application()
 
 Application::~Application()
 {
-
+	Debug::Log::Notify("Application Closed");
 }
 
 void Application::Engage()
@@ -32,22 +32,20 @@ void Application::HandleEvents()
 	{
 		switch (event.Event.KeyEvent.wVirtualKeyCode)
 		{
-			// Move All Of The Key Codes To Another Class To Make It Easier To Get A Key, Ex: Keys::W
 			case VK_ESCAPE:
 				Application::engaged = false;
 				break;
-			case 0x57:
-					
+			case Keys::W:
+				Debug::Log::Warn("W");
 				break;
-			case 0x41:
-
+			case Keys::A:
+				Debug::Log::Warn("A");
 				break;
-			case 0x53:
-				
-
+			case Keys::S:
+				Debug::Log::Warn("S");
 				break;
-			case 0x44:
-
+			case Keys::D:
+				Debug::Log::Warn("D");
 				break;
 		}
 

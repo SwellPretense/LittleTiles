@@ -49,5 +49,11 @@
     <ClInclude Include="Ent.hpp">
       <Filter>Header\Rhyme</Filter>
     </ClInclude>
+    <ClInclude Include="Keys.hpp">
+      <Filter>Header\Console</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" />
   </ItemGroup>
 </Project>

@@ -8,8 +8,11 @@ int main()
     while (app->engaged)
     {
         app->HandleEvents();
+        app->Render();
     }
 
+    app->Disengage();
+    delete app;
     return 1;
 }
 
