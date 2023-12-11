@@ -2,12 +2,36 @@
 
 Application::Application()
 {
-	Debug::Log::Notify("Application Started");
+	if (SDL_Init(SDL_INIT_EVERYTHING) < 0) 
+	{
+		Debug::Log::Alert("Failed To Initialize SDL");
+	}
+	aWindow = SDL_CreateWindow(
+		"SDL2 Engine", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,
+		aWidth, aHeight, SDL_WINDOW_ALLOW_HIGHDPI
+	);
+	if (aWindow == nullptr) {
+		Debug::Log::Alert("Failed To Create Window");
+	}
+	aRenderer = SDL_CreateRenderer(aWindow, -1, SDL_RENDERER_PRESENTVSYNC);
+
 	Application::Engage();
 }
 
 Application::~Application()
 {
+	Application::Disengage();
+	if (aWindow != nullptr)
+	{
+		SDL_DestroyWindow(aWindow);
+		aWindow = nullptr;
+	}
+	if (aRenderer != nullptr)
+	{
+		SDL_DestroyRenderer(aRenderer);
+		aRenderer = nullptr;
+	}
+	SDL_Quit();
 	Debug::Log::Notify("Application Closed");
 }
 
@@ -18,40 +42,24 @@ void Application::Engage()
 
 void Application::Render()
 {
+	Digital::ClearScreen(aRenderer);
 
+	SDL_RenderPresent(aRenderer);
 }
 
 void Application::HandleEvents()
 {
-	// Check If Input Is Received
-	INPUT_RECORD event;
-	DWORD count;
-	ReadConsoleInput(Application::hstdin, &event, 1, &count);
-
-	if ((event.EventType == KEY_EVENT) && !event.Event.KeyEvent.bKeyDown)
+	if (SDL_PollEvent(&event))
 	{
-		switch (event.Event.KeyEvent.wVirtualKeyCode)
+		switch (event.type)
 		{
-			case VK_ESCAPE:
-				Application::engaged = false;
-				break;
-			case Keys::W:
-				Debug::Log::Warn("W");
-				break;
-			case Keys::A:
-				Debug::Log::Warn("A");
-				break;
-			case Keys::S:
-				Debug::Log::Warn("S");
-				break;
-			case Keys::D:
-				Debug::Log::Warn("D");
-				break;
+		default:
+			break;
+		case SDL_QUIT:
+			engaged = false;
+			break;
 		}
-
-		event.Event.KeyEvent.wVirtualKeyCode = -1;
 	}
-
 }
 
 void Application::Disengage()

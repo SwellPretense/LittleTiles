@@ -12,6 +12,8 @@ public:
     static constexpr const char* MAGENTA = "\033[35m";
     static constexpr const char* CYAN = "\033[36m";
     static constexpr const char* RESET = "\033[0m";
+
+	static constexpr const SDL_Color BLACK = { 0, 0, 0, 255 };
 };
 
 #endif // COLORS_HPP

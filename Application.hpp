@@ -14,6 +14,10 @@ public:
 	void Disengage();
 
 	bool engaged = true;
+	int aHeight, aWidth = 1280;
+	SDL_Window* aWindow;
+	SDL_Renderer* aRenderer;
+	SDL_Event event;
 	HANDLE hstdin = GetStdHandle(STD_INPUT_HANDLE);
 };
 

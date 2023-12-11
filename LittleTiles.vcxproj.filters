@@ -21,6 +21,12 @@
     <Filter Include="Header\Rhyme">
       <UniqueIdentifier>{693df637-70ab-4249-9735-5d34ba187e1b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header\Digital">
+      <UniqueIdentifier>{e8436c11-e23c-4043-85ce-1041373098d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Digital">
+      <UniqueIdentifier>{8067dab7-bf95-4009-9ddd-dca625c58063}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp">
@@ -32,6 +38,9 @@
     <ClCompile Include="Ent.cpp">
       <Filter>Source\Rhyme</Filter>
     </ClCompile>
+    <ClCompile Include="Digital.cpp">
+      <Filter>Source\Digital</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source.hpp">
@@ -39,9 +48,6 @@
     </ClInclude>
     <ClInclude Include="Debug.hpp">
       <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="Colors.hpp">
-      <Filter>Header\Console</Filter>
     </ClInclude>
     <ClInclude Include="Application.hpp">
       <Filter>Header</Filter>
@@ -51,6 +57,12 @@
     </ClInclude>
     <ClInclude Include="Keys.hpp">
       <Filter>Header\Console</Filter>
+    </ClInclude>
+    <ClInclude Include="Colors.hpp">
+      <Filter>Header\Digital</Filter>
+    </ClInclude>
+    <ClInclude Include="Digital.hpp">
+      <Filter>Header\Digital</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

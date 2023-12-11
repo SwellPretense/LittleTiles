@@ -1,6 +1,7 @@
 #pragma once
 
 // Includes
+#include <SDL.h>
 #include <iostream>
 #include <conio.h>
 #include <windows.h>
@@ -11,3 +12,4 @@
 #include "Keys.hpp"
 #include "Debug.hpp"
 #include "Ent.hpp"
+#include "Digital.hpp"
