@@ -15,7 +15,3 @@ int main()
     delete app;
     return 1;
 }
-
-////////////
-// Notes //
-// - Game Class
