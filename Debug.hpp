@@ -9,15 +9,15 @@ public:
 	public:
 		static void Notify(const char* msg) // 0
 		{
-			std::cout << Colors::BLUE << "-[LOG]- " << Colors::RESET << msg << "\n";
+			std::cout << Colors::cBLUE << "-[LOG]- " << Colors::cRESET << msg << "\n";
 		}
 		static void Warn(const char* msg)   // 1
 		{
-			std::cout << Colors::YELLOW << "-[WARNING]- " << Colors::RESET << msg << "\n";
+			std::cout << Colors::cYELLOW << "-[WARNING]- " << Colors::cRESET << msg << "\n";
 		} 
 		static void Alert(const char* msg) // 2
 		{
-			std::cout << Colors::RED << "-[ERROR]- " << Colors::RESET << msg << "\n";
+			std::cout << Colors::cRED << "-[ERROR]- " << Colors::cRESET << msg << "\n";
 		}
 	};
 };

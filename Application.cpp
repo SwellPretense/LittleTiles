@@ -1,5 +1,7 @@
 #include "Source.hpp"
 
+Ent ply(50, 50);
+
 Application::Application()
 {
 	if (SDL_Init(SDL_INIT_EVERYTHING) < 0) 
@@ -43,7 +45,7 @@ void Application::Engage()
 void Application::Render()
 {
 	Digital::ClearScreen(aRenderer);
-
+	ply.Draw(aRenderer);
 	SDL_RenderPresent(aRenderer);
 }
 
@@ -53,12 +55,23 @@ void Application::HandleEvents()
 	{
 		switch (event.type)
 		{
-		default:
-			break;
 		case SDL_QUIT:
+			Debug::Log::Warn("W");
 			engaged = false;
 			break;
-		}
+		case SDL_SCANCODE_W:
+			ply.Move(1);
+			break;
+		case SDL_SCANCODE_A:
+			ply.Move(2);
+			break;
+		case SDL_SCANCODE_S:
+			ply.Move(3);
+			break;
+		case SDL_SCANCODE_D:
+			ply.Move(4);
+			break;
+		}	
 	}
 }
 
