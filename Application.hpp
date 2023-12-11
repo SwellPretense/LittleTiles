@@ -14,7 +14,7 @@ public:
 	void Disengage();
 
 	bool engaged = true;
-	int aHeight, aWidth = 1280;
+	int aHeight = 720, aWidth = 1280;
 	SDL_Window* aWindow;
 	SDL_Renderer* aRenderer;
 	SDL_Event event;

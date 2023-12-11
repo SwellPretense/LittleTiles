@@ -2,7 +2,7 @@
 
 Application* app = nullptr;
 
-int main()
+int main( int argc, char* argv[] )
 {
     app = new Application();
     while (app->engaged)
